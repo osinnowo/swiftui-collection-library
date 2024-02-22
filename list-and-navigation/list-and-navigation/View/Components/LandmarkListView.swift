@@ -14,7 +14,7 @@ struct LandmarkListView: View {
         NavigationSplitView {
             List(landmarks) { landmark in
                 NavigationLink {
-                    LandmarkDetailView(image: landmark.image)
+                    LandmarkDetailView(landmark: landmark)
                 } label: {
                     LandmarkRowView(landmark: landmark)
                 }

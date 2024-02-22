@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World!")
+        LandmarkListView(landmarks: loadData())
     }
     
     private func loadData() -> [Landmark] {
-        guard let data: [Landmark] = DataManager.loadData("") else {
+        guard let data: [Landmark] = DataManager.loadData("landmarkData") else {
             return []
         }
         return data
