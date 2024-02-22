@@ -9,20 +9,20 @@ import SwiftUI
 import CoreLocation
 
 public struct Landmark: Hashable, Codable, Identifiable {
-    public var id: String
+    public var id: Int
     var name: String
     var park: String
     var state: String
     var description: String
     
-    init(name: String, imageName: String) {
-        self.id = name
+    init(id: Int, name: String, park: String, state: String, description: String, imageName: String, coordinates: Coordinates) {
+        self.id = id
         self.name = name
-        self.park = ""
-        self.state = ""
-        self.description = ""
+        self.park = park
+        self.state = state
+        self.description = description
         self.imageName = imageName
-        self.coordinates = Coordinates(latitude: 0.00, longitude: 0.00)
+        self.coordinates = coordinates
     }
     
     private var coordinates: Coordinates

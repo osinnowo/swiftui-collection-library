@@ -8,16 +8,14 @@
 import SwiftUI
 
 class DataManager {
-    
-    static func loadData<Entity: Decodable>(_ fileName: String) -> Entity? {
-        guard let file = Bundle.main.url(forResource: fileName, withExtension: nil) else {
+    static func loadData<T: Decodable>(_ fileName: String) -> T? {
+        guard let url: URL = Bundle.main.url(forResource: fileName, withExtension: nil) else {
             return nil
         }
         
         do {
-            let data = try Data(contentsOf: file)
-            let content = try JSONDecoder().decode(Entity.self, from: data)
-            
+            let data = try Data(contentsOf: url)
+            let content = try JSONDecoder().decode(T.self, from: data)
             return content
         } catch {
             return nil

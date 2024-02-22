@@ -29,13 +29,17 @@ struct LandmarkRowView: View {
 #Preview {
     Group {
         LandmarkRowView(landmark: .init(
-            name: "Turtle Rock",
-            imageName: "charleyrivers")
-        )
-        
-        LandmarkRowView(landmark: .init(
-            name: "Chinco Teague",
-            imageName: "chincoteague")
+                id: 1001,
+                name: "Charley Rivers",
+                park: "Hyde Park",
+                state: "United State",
+                description: "Lorem Ipsum",
+                imageName: "charleyrivers",
+                coordinates: Landmark.Coordinates(
+                    latitude: 0.00,
+                    longitude: 0.00
+                )
+            )
         )
     }
 }

@@ -13,7 +13,7 @@ struct ContentView: View {
     }
     
     private func loadData() -> [Landmark] {
-        guard let data: [Landmark] = DataManager.loadData("landmarkData") else {
+        guard let data: [Landmark] = DataManager.loadData("landmarkData.json") else {
             return []
         }
         return data

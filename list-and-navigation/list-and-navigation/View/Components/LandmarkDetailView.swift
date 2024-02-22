@@ -11,7 +11,7 @@ import SwiftUI
 struct LandmarkDetailView: View {
     var landmark: Landmark
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack {
                 MapView(coordinate: landmark.locationCoordinate)
                     .frame(height: 300)
@@ -51,8 +51,13 @@ struct LandmarkDetailView: View {
 #Preview {
     LandmarkDetailView(
         landmark: .init(
+            id: 1001,
             name: "Charley Rivers",
-            imageName: "charleyrivers"
+            park: "Hyde Park",
+            state: "United State",
+            description: "Lorem Ipsum",
+            imageName: "charleyrivers",
+            coordinates: Landmark.Coordinates(latitude: 0.00, longitude: 0.00)
         )
     )
 }
