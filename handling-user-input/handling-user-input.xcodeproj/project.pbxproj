@@ -24,6 +24,7 @@
 		FD263D842B887CB40028A6B7 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD263D832B887CB40028A6B7 /* CircleImage.swift */; };
 		FD263D862B887DB90028A6B7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD263D852B887DB90028A6B7 /* MapView.swift */; };
 		FD263D882B8882E70028A6B7 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = FD263D872B8882E70028A6B7 /* data.json */; };
+		FD4809AA2B88D13100AA04AC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809A92B88D13100AA04AC /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		FD263D832B887CB40028A6B7 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		FD263D852B887DB90028A6B7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FD263D872B8882E70028A6B7 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		FD4809A92B88D13100AA04AC /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				FD263D812B887C460028A6B7 /* LandmarkDetail.swift */,
 				FD263D832B887CB40028A6B7 /* CircleImage.swift */,
 				FD263D852B887DB90028A6B7 /* MapView.swift */,
+				FD4809A92B88D13100AA04AC /* FavoriteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				FD263D502B8872320028A6B7 /* Database.xcdatamodeld in Sources */,
 				FD263D7C2B8873940028A6B7 /* DataManager.swift in Sources */,
 				FD263D4D2B8872320028A6B7 /* Persistence.swift in Sources */,
+				FD4809AA2B88D13100AA04AC /* FavoriteButton.swift in Sources */,
 				FD263D862B887DB90028A6B7 /* MapView.swift in Sources */,
 				FD263D802B887AEC0028A6B7 /* LandmarkList.swift in Sources */,
 				FD263D822B887C460028A6B7 /* LandmarkDetail.swift in Sources */,

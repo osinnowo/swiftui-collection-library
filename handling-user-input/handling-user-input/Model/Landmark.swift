@@ -9,13 +9,40 @@ import SwiftUI
 import CoreLocation
 
 public struct Landmark: Hashable, Codable, Identifiable {
+    
+    struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+    }
+    
     public var id: Int
     var name: String
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
-    init(id: Int, name: String, park: String, state: String, description: String, imageName: String, coordinates: Coordinates) {
+    private var imageName: String
+    private var coordinates: Coordinates
+    
+    var image: Image {
+        Image(imageName)
+    }
+    
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+    }
+    
+    init(
+        id: Int,
+        name: String,
+        park: String,
+        state: String,
+        description: String,
+        imageName: String,
+        coordinates: Coordinates,
+        isFavorite: Bool = false
+    ) {
         self.id = id
         self.name = name
         self.park = park
@@ -23,21 +50,6 @@ public struct Landmark: Hashable, Codable, Identifiable {
         self.description = description
         self.imageName = imageName
         self.coordinates = coordinates
-    }
-    
-    private var coordinates: Coordinates
-    private var imageName: String
-    
-    var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-    }
-    
-    var image: Image {
-        Image(imageName)
-    }
-    
-    struct Coordinates: Hashable, Codable {
-        var latitude: Double
-        var longitude: Double
+        self.isFavorite = isFavorite
     }
 }

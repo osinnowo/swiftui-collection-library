@@ -6,6 +6,12 @@
 //
 
 import SwiftUI
+import Observation
+
+@Observable
+class ModelData {
+    var landmarks: [Landmark] = DataManager.loadData(fileName: "data.json") ?? []
+}
 
 struct DataManager {
     static func loadData<T: Decodable>(fileName: String) -> T? {

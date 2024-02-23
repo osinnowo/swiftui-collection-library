@@ -20,6 +20,11 @@ struct LandmarkRow: View {
             Text(landmark.name)
                 .font(.system(size: 21, weight: .regular, design: .rounded))
             Spacer()
+            
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
+            }
         }
     }
 }
