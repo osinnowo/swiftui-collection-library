@@ -11,6 +11,7 @@ struct User: Decodable {
     var username: String
     var name: String
     var email: String
+    var phone: String
 }
 
 struct Empty: Encodable {}

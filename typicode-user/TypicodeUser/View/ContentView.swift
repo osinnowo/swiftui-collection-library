@@ -13,13 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationSplitView {
-            List(viewModel.users, id: \.email) { user in
-                NavigationLink {
-                    Text("\(user.name)")
-                } label: {
-                    Text("\(user.email)")
-                }
-            }
+            UserList(users: viewModel.users)
             .navigationTitle("Users")
             .navigationBarTitleDisplayMode(.large)
             .onAppear(perform: {

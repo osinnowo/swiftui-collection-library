@@ -12,7 +12,7 @@
 		FD4809BC2B890C2700AA04AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4809BB2B890C2700AA04AC /* Assets.xcassets */; };
 		FD4809BF2B890C2700AA04AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4809BE2B890C2700AA04AC /* Preview Assets.xcassets */; };
 		FD4809C12B890C2700AA04AC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809C02B890C2700AA04AC /* Persistence.swift */; };
-		FD4809C42B890C2700AA04AC /* TypicodeUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4809C22B890C2700AA04AC /* TypicodeUser.xcdatamodeld */; };
+		FD4809C42B890C2700AA04AC /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4809C22B890C2700AA04AC /* Database.xcdatamodeld */; };
 		FD4809CE2B890C2700AA04AC /* TypicodeUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809CD2B890C2700AA04AC /* TypicodeUserTests.swift */; };
 		FD4809D82B890C2700AA04AC /* TypicodeUserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809D72B890C2700AA04AC /* TypicodeUserUITests.swift */; };
 		FD4809DA2B890C2700AA04AC /* TypicodeUserUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809D92B890C2700AA04AC /* TypicodeUserUITestsLaunchTests.swift */; };
@@ -20,6 +20,8 @@
 		FD4809EE2B8911C800AA04AC /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809ED2B8911C800AA04AC /* UserViewModel.swift */; };
 		FD4809F12B8911F300AA04AC /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809F02B8911F300AA04AC /* UserRepository.swift */; };
 		FD4809F52B8916FF00AA04AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809F42B8916FF00AA04AC /* User.swift */; };
+		FD4809FA2B8923A600AA04AC /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809F92B8923A600AA04AC /* UserRow.swift */; };
+		FD4809FC2B8927BD00AA04AC /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4809FB2B8927BD00AA04AC /* UserList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		FD4809ED2B8911C800AA04AC /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		FD4809F02B8911F300AA04AC /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		FD4809F42B8916FF00AA04AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FD4809F92B8923A600AA04AC /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		FD4809FB2B8927BD00AA04AC /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		FD4809B62B890C2500AA04AC /* TypicodeUser */ = {
 			isa = PBXGroup;
 			children = (
+				FD4809F62B89236100AA04AC /* Database */,
 				FD4809EF2B8911E600AA04AC /* Repository */,
 				FD4809EC2B8911AE00AA04AC /* ViewModel */,
 				FD4809E92B890CD000AA04AC /* Base */,
@@ -113,8 +118,6 @@
 				FD4809E72B890CAF00AA04AC /* Model */,
 				FD4809E62B890CA900AA04AC /* Service */,
 				FD4809BB2B890C2700AA04AC /* Assets.xcassets */,
-				FD4809C02B890C2700AA04AC /* Persistence.swift */,
-				FD4809C22B890C2700AA04AC /* TypicodeUser.xcdatamodeld */,
 				FD4809BD2B890C2700AA04AC /* Preview Content */,
 			);
 			path = TypicodeUser;
@@ -165,6 +168,7 @@
 		FD4809E82B890CB300AA04AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD4809F72B89237E00AA04AC /* Components */,
 				FD4809B92B890C2500AA04AC /* ContentView.swift */,
 			);
 			path = View;
@@ -207,6 +211,32 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		FD4809F62B89236100AA04AC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FD4809C02B890C2700AA04AC /* Persistence.swift */,
+				FD4809C22B890C2700AA04AC /* Database.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		FD4809F72B89237E00AA04AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD4809F82B89239800AA04AC /* User */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FD4809F82B89239800AA04AC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FD4809F92B8923A600AA04AC /* UserRow.swift */,
+				FD4809FB2B8927BD00AA04AC /* UserList.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,12 +369,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4809FC2B8927BD00AA04AC /* UserList.swift in Sources */,
 				FD4809EB2B890CEE00AA04AC /* NetworkService.swift in Sources */,
 				FD4809EE2B8911C800AA04AC /* UserViewModel.swift in Sources */,
 				FD4809C12B890C2700AA04AC /* Persistence.swift in Sources */,
 				FD4809F12B8911F300AA04AC /* UserRepository.swift in Sources */,
 				FD4809F52B8916FF00AA04AC /* User.swift in Sources */,
-				FD4809C42B890C2700AA04AC /* TypicodeUser.xcdatamodeld in Sources */,
+				FD4809C42B890C2700AA04AC /* Database.xcdatamodeld in Sources */,
+				FD4809FA2B8923A600AA04AC /* UserRow.swift in Sources */,
 				FD4809BA2B890C2500AA04AC /* ContentView.swift in Sources */,
 				FD4809B82B890C2500AA04AC /* Application.swift in Sources */,
 			);
@@ -678,13 +710,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FD4809C22B890C2700AA04AC /* TypicodeUser.xcdatamodeld */ = {
+		FD4809C22B890C2700AA04AC /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				FD4809C32B890C2700AA04AC /* TypicodeUser.xcdatamodel */,
 			);
 			currentVersion = FD4809C32B890C2700AA04AC /* TypicodeUser.xcdatamodel */;
-			path = TypicodeUser.xcdatamodeld;
+			path = Database.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
