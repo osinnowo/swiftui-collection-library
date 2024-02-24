@@ -18,8 +18,6 @@ struct LandmarkList: View {
         })
     }
     
-    var landmarks: [Landmark]
-    
     var body: some View {
         NavigationSplitView {
             List {
@@ -43,16 +41,6 @@ struct LandmarkList: View {
 }
 
 #Preview {
-    LandmarkList(landmarks: [
-        .init(
-            id: 1001,
-            name: "Turtle Rock",
-            park: "Hyde Park",
-            state: "United State",
-            description: "Lorem Ipsum",
-            imageName: "charleyrivers",
-            coordinates: Landmark.Coordinates(latitude: 0.0, longitude: 0.0)
-        )
-    ])
+    LandmarkList()
     .environment(ModelData())
 }

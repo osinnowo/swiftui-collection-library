@@ -37,7 +37,10 @@ struct LandmarkRow: View {
             state: "United State",
             description: "Lorem Ipsum",
             imageName: "charleyrivers",
-            coordinates: Landmark.Coordinates(latitude: 0.0, longitude: 0.0)
+            coordinates: Landmark.Coordinates(
+                latitude: 0.0,
+                longitude: 0.0
+            )
         )
     )
 }

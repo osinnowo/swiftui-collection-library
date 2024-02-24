@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-        LandmarkList(landmarks: fetchData())
+        LandmarkList()
     }
     
     private func fetchData() -> [Landmark] {
