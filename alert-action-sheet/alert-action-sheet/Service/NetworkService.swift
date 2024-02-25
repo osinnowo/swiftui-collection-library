@@ -38,7 +38,7 @@ final class NetworkService<Request: Encodable, Response: Decodable>: NetworkServ
         return NetworkService()
     }
     
-    func call(path: String, method: HttpMethod = .GET, body: Request? = nil, debuggable: Bool = true) async -> Result<ResponseWrapper<Response>, HttpError> {
+    func call(path: String, method: HttpMethod = .GET, body: Request? = nil, debuggable: Bool = false) async -> Result<ResponseWrapper<Response>, HttpError> {
         guard let url = URL(string: path) else {
             return .failure(HttpError.urlError)
         }

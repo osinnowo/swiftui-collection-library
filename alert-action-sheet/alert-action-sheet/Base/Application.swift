@@ -11,6 +11,8 @@ import SwiftUI
 struct Application: App {
     //MARK: - AppEvent
     @State private var sharedViewModel = SharedViewModel()
+    @State private var contentViewModel = ContentViewModel()
+    
     @Environment(\.scenePhase) private var scenePhase
     
     init() {
@@ -25,6 +27,7 @@ struct Application: App {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environment(\.sharedViewModel, sharedViewModel)
+                .environment(contentViewModel)
         }
         .onChange(of: scenePhase, { _, phase in
             AppStateManager.configure(using: phase)

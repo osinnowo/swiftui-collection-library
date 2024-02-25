@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DC9A1179-2317-405F-BD49-B328B3119D55"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F792DFC-3551-4707-A8E9-B792E5CAD0C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "alert-action-sheet/Service/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "call(path:method:body:debuggable:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9F792DFC-3551-4707-A8E9-B792E5CAD0C9 - 934f3155e2136f44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for alert_action_sheet.NetworkService.call(path: Swift.String, method: alert_action_sheet.HttpMethod, body: Swift.Optional&lt;&#x3c4;_0_0&gt;, debuggable: Swift.Bool) async -&gt; Swift.Result&lt;alert_action_sheet.ResponseWrapper&lt;&#x3c4;_0_1&gt;, alert_action_sheet.HttpError&gt;"
+                  moduleName = "alert-action-sheet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itunu/Documents/swift-ui-tutorial/alert-action-sheet/alert-action-sheet/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "9F792DFC-3551-4707-A8E9-B792E5CAD0C9 - 934f3155e2136f44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for alert_action_sheet.NetworkService.call(path: Swift.String, method: alert_action_sheet.HttpMethod, body: Swift.Optional&lt;&#x3c4;_0_0&gt;, debuggable: Swift.Bool) async -&gt; Swift.Result&lt;alert_action_sheet.ResponseWrapper&lt;&#x3c4;_0_1&gt;, alert_action_sheet.HttpError&gt;"
+                  moduleName = "alert-action-sheet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itunu/Documents/swift-ui-tutorial/alert-action-sheet/alert-action-sheet/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

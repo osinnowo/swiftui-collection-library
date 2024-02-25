@@ -23,7 +23,6 @@ final class SharedViewModel {
         switch result {
             case .success(let users):
                 self.users = users
-                self.error = true
             case .failure(_):
                 self.error = true
         }
