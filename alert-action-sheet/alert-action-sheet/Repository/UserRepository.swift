@@ -8,8 +8,10 @@
 import SwiftUI
 
 final class UserRepository {
+    //@AppStorage("username") var username: String = String()
+    
     func fetchUsers() async -> Result<[User], Error> {
-        let response: Result<ResponseWrapper<[User]>, HttpError> =  await NetworkService<Empty, [User]>.shared.call(path: "https://jsonplaceholder.typicode.com/users")
+        let response: Result<ResponseWrapper<[User]>, HttpError> = await NetworkService<Empty, [User]>.shared.call(path: "https://jsonplaceholder.typicode.com/users")
         switch response {
             case .success(let wrapper):
                 switch wrapper {

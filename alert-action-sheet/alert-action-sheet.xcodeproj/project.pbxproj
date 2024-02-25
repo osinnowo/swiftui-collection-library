@@ -150,7 +150,7 @@
 		FDC800462B8AA53D00B3BD7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FDC800482B8AA55300B3BD7B /* SharedComponents */,
+				FDC800482B8AA55300B3BD7B /* Shared */,
 				FDC8002F2B8AA4D200B3BD7B /* ContentView.swift */,
 			);
 			path = View;
@@ -165,11 +165,11 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		FDC800482B8AA55300B3BD7B /* SharedComponents */ = {
+		FDC800482B8AA55300B3BD7B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SharedComponents;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		FDC800592B8ABC4A00B3BD7B /* Network */ = {

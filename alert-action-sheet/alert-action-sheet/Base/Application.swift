@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct Application: App {
+    //MARK: - AppEvent
     @State private var sharedViewModel = SharedViewModel()
-    let persistenceController = PersistenceController.shared
     @Environment(\.scenePhase) private var scenePhase
+    
+    init() {
+       //Firebase.init()
+    }
+    
+    //MARK: - Property
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
