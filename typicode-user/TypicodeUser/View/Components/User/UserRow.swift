@@ -15,7 +15,8 @@ struct UserRow: View {
             Image(user.username)
                 .resizable()
                 .frame(width: 80, height: 80)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+                .scaledToFill()
+                .clipShape(RoundedRectangle(cornerRadius: 8))
             
             VStack(alignment: .leading) {
                 Text("\(user.name)")
