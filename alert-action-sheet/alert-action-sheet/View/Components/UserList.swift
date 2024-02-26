@@ -8,20 +8,57 @@
 import SwiftUI
 
 struct UserList: View {
+    @Environment(\.dismiss) var dismss
     @Binding var users: [User]
+    
     var body: some View {
-        List(users, id: \.email) { user in
-            NavigationLink(value: user) {
-                UserRow(user: user)
+        List {
+            ForEach(users.indices, id: \.self) { index in
+                NavigationLink(value: users[index]) {
+                    UserRow(user: users[index])
+                }
+                .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+                    Button {
+                        users.remove(at: index)
+                    } label: {
+                        Image(systemName: "heart")
+                    }
+                    .tint(.green)
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .tint(.orange)
+                    
+                })
+                .contextMenu(ContextMenu(menuItems: {
+                    Button {
+                        print("Reserve a table")
+                    } label: {
+                        HStack {
+                            Text("Reserve a table")
+                            Image(systemName: "phone")
+                        }
+                    }
+                    
+                    Button {
+                        print("Remove from favorite clicked!")
+                    } label: {
+                        HStack {
+                            Text("Remove from favorite")
+                            Image(systemName: "heart")
+                        }
+                    }
+                }))
             }
             .listRowSeparator(.hidden)
-        }
-        .navigationDestination(for: User.self, destination: { item in
-            Text(item.name)
-        })
-        .swipeActions(edge: .leading, content: {
+//            .onDelete(perform: { indexSet in
+//                users.remove(atOffsets: indexSet)
+//            })
             
-        })
+        }
     }
 }
 

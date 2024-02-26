@@ -9,7 +9,6 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    
     //@StateObject var photoViewModel = PhotoViewModel()
     //@State var userViewModel = UserViewModel()
     
@@ -21,7 +20,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-        
             UserList(users: .constant(viewModel.users))
                 .alert(isPresented: .constant(viewModel.error)) { // .constant() for non-bindable property
                     Alert(
@@ -39,6 +37,20 @@ struct ContentView: View {
         .task {
             await viewModel.fetchUserRecords()
         }
+//        
+//        .navigationDestination(for: User.self, destination: { item in
+//            Text(item.name)
+//                .navigationBarBackButtonHidden(true)
+//                .toolbar {
+//                    ToolbarItem(placement: .topBarLeading) {
+//                        Button {
+//                            dismss()
+//                        } label: {
+//                            Text(Image(systemName: "chevron.left"))
+//                        }
+//                    }
+//                }
+//        })
     }
 }
 
