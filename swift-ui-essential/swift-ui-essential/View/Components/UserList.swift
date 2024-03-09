@@ -12,31 +12,26 @@ struct UserList: View {
     var accounts: [Account]
     
     var body: some View {
-        List(accounts) { item in
-            NavigationLink {
-                Text("\(item.name)")
-            } label: {
-                UserRow(account: item)
-            }
-            .listRowSeparator(.hidden)
-            .buttonStyle(PlainButtonStyle())
-        }
-//        .navigationDestination(for: Account.self) { item in
-//            Text("\(item.name)")
-//        }
-        .listStyle(.plain)
-        .padding(.all, 5)
-        
-//        List {
-//            ForEach(accounts.indices, id: \.self) { index in
-//                UserRow(account: self.accounts[index])
-//                    .navigationDestination(for: Account.self) { item in
-//                        Text("\(item.name)")
-//                    }
+//        List(accounts) { item in
+//            NavigationLink {
+//                Text("\(item.name)")
+//            } label: {
+//                UserRow(account: item)
 //            }
-//            .listStyle(.plain)
 //            .listRowSeparator(.hidden)
+//            .buttonStyle(PlainButtonStyle())
 //        }
+//        .listStyle(.plain)
+//        .padding(.all, 5)
+        
+        List(accounts) { item in
+            UserRow(account: item)
+        }
+        .navigationDestination(for: Account.self, destination: { item in
+            Text("\(item.name)")
+        })
+        .listStyle(.plain)
+        .padding(.all, .zero)
     }
 }
 

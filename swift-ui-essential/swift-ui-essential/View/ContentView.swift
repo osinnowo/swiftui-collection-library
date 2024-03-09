@@ -15,20 +15,28 @@ struct ContentView: View {
     @EnvironmentObject private var accountViewModel: AccountViewModel
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
+//            UserList(accounts: userViewModel.accounts)
+//                .onAppear(perform: {
+//                    self.userViewModel.initiate()
+//            })
+//            .navigationTitle("Account")
+//        }
+        
+        NavigationStack {
             UserList(accounts: userViewModel.accounts)
-                .onAppear(perform: {
-                    self.userViewModel.initiate()
-            })
             .navigationTitle("Account")
         }
+        .onAppear(perform: {
+            self.userViewModel.initiate()
+        })
     }
 }
 
 #Preview {
     ContentView()
-        .environmentObject(AccountViewModel())
         .environment(UserViewModel())
+        .environmentObject(AccountViewModel())
 }
 
 
